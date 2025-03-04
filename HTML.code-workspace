@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../HTML"
+		},
+		{
+			"path": "../JS"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../【展開用】第2回講義コード"
+		},
+		{
+			"path": "../JQuery"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "original-web-site"
+	}
+}

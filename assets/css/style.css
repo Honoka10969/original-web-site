@@ -1,0 +1,746 @@
+/* ヘッダースタイリング */
+.header {
+    height: 80px;
+    background-color: #4d5657;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 15px rgba(53, 54, 58, 0.5);
+  }
+  
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    color: #fff;
+    margin-right: 40px;
+    margin-left: 30px;
+  }
+
+  .header__container1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__logo {
+    width: 100px;
+  }
+  
+  .header__logo a {
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .hamburger {
+  display: flex; /* 横並びにする */
+  align-items: center; /* 垂直方向中央揃え */
+  justify-content: center; /* 水平方向中央揃え */
+  gap: 10px; /* アイコンとMENUの間隔 */
+  white-space: nowrap; /* 改行を防ぐ */
+  width: 50px;
+  height: 80px;
+  position: relative;
+  appearance: none;
+  border: 0;
+  margin-bottom: 10px;
+  background-color: #4d5657;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger p{
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.952);
+  position: relative;
+  top: 15px;
+}
+
+.hamburger span {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: hsla(0, 0%, 100%, 0.588);
+  transition: all 0.5s;
+}
+
+.hamburger span::before {
+  top: 10px;
+}
+
+.hamburger span::after {
+  bottom: 10px;
+}
+
+.nav {
+  position: fixed;
+  width: 30%;
+  height: 100vh;
+  top: 80px;
+  background-color: #4d5657;
+  padding: 50px 0;
+  transition: all 0.5s;
+  border-top: #fff 1px solid;
+  right: -100%;
+  visibility: hidden;  /* 画面外にいる時は非表示 */
+  }
+
+  .nav.open {
+    right: 0;      /* クリックされたら、画面内にスライドイン */
+    display: block;
+    visibility: visible;  /* 画面内に表示される時は可視化 */
+  }
+  
+  .nav__item a {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 50px;
+    padding: 20px 0 20px 0px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+  }
+  
+  .nav__item a:hover {
+    background-color: #fff;
+    color: black;
+  }
+
+
+  .hamburger.open span {
+    background-color: transparent;
+  }
+  
+  .hamburger.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .hamburger.open span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+  
+  .nav.open {
+    right: 0;      /* クリックされたら、画面内にスライドイン */
+    display: block;
+  }
+
+  /* ハンバーガーの中身 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* メニューのスタイル */
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+
+  /* homeのリンクだけ大きく太い文字に */
+.nav__item a[href="/"] {
+  font-size: 26px; /* 文字を大きく */
+  font-weight: bold; /*太字に*/
+}
+
+  @media (max-width: 768px) {
+    .hamburger {
+      width: 40px;
+      height: 60px;
+    }
+  
+    .hamburger p {
+      font-size: 0.9em;
+      top: 10px;
+    }
+  
+    .nav {
+      width: 60%; /* スマホでは幅を広めに */
+    }
+  
+    .nav__item a {
+      font-size: 18px;
+    }
+  }
+  
+  /* さらに小さい画面（480px以下） */
+  @media (max-width: 480px) {
+    .hamburger {
+      width: 35px;
+      height: 50px;
+    }
+  
+    .nav {
+      width: 80%;
+    }
+  
+    .nav__item a {
+      font-size: 16px;
+      padding: 12px 0 12px 20px;
+    }
+  }
+  
+
+.sliderArea {
+  contain: paint;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+ /* スライダーのスタイル */
+.regular {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+/* slick-slideの設定 */
+.regular .slick-slide {
+  display: block;
+  text-align: center;
+  margin: 0;
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.regular .slick-active {
+  opacity: 1;
+}
+.regular .slick-current {
+  opacity: 1;
+}
+
+.regular .slick-list {
+  overflow: visible;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* 画像のスタイル */
+.regular img {
+  width: 100%;            /* 画像をスライダー幅に合わせて調整 */
+  height: auto;           /* アスペクト比を保つ */
+  clip-path: inset(0);   /* 画像を表示範囲内に制限 */
+}
+
+.thumb {
+  margin: 20px 0 0;
+}
+.thumb .slick-slide {
+  cursor: pointer;
+}
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+
+/*====================================================================
+slick
+====================================================================*/
+
+html, body {
+  margin: 0;
+  padding: 80px 0 0 0;
+  background-color: gray;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+	  z-index: 3;
+    top: 40%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid black;/*矢印の色*/
+    border-right: 2px solid black;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev { /*戻る矢印の位置と形状*/
+    left:-30px; 
+    transform: rotate(-135deg);
+} 
+
+
+.slick-next{ /* 次へ矢印の位置と形状 */
+    right: -30px;
+    transform: rotate(45deg);
+}
+
+
+
+.slick-dots {
+	position: relative;
+	z-index: 3;
+  text-align:center;
+	margin:10px 0 0 0;
+  padding:9.5px;
+  bottom: 10px;
+}
+
+.slick-dots li {
+  display:inline-block;
+	margin:0 8px;
+  width: auto;
+  height: auto;
+}
+
+.slick-dots button {
+    font-size: 0;
+    color: transparent;
+    outline: none;
+    width: 5px;/*ドットボタンのサイズ*/
+    height: 5px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+    border: none;
+    padding: 0;
+}
+
+.slick-dots .slick-active button{ 
+  background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+  .regular {
+    max-width: 90%;
+  }
+
+  .slick-prev {
+    left: -30px;
+  }
+
+  .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-prev, .slick-next {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slick-prev, .slick-next {
+    display: none; /* 矢印非表示 */
+  }
+
+  .slick-dots {
+    padding: 5px;
+  }
+
+  .slick-dots button {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* サイト説明文のスタイル */
+.site-description {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.site-description h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #4d5657;
+}
+
+.site-description p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* ナビゲーション全体のスタイル */
+.restaurant-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* リンクの間隔 */
+  padding: 10px 30px;
+  background: rgba(0, 0, 0, 0.7); /* 半透明の黒 */
+  border-radius: 50px;
+  max-width: 600px;
+  margin: 20px auto; /* 中央揃え */
+}
+
+
+/* リンクのスタイル */
+.restaurant-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+/* ホバー時のエフェクト */
+.restaurant-nav a:hover {
+  background:  rgb(238, 193, 193);
+  color: #fff;
+  transform: translateY(-3px); /* 浮き上がる感じ */
+  box-shadow: 0 8px 15px rgba(255, 127, 80, 0.5);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .restaurant-nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    width: 60%;
+  }
+  .restaurant-nav a {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* サイト説明文 */
+.site-description {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: 'Poppins', 'Montserrat', sans-serif; /* フォントを適用 */
+}
+
+.site-description h2 {
+  font-size: 2.5em;
+  font-family: 'Playfair Display', serif; /* 高級感のある見出し */
+  margin-bottom: 20px;
+  color: #4d5657;
+}
+
+.site-description p {
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/*レストランセクションの見出しタイトル*/
+.restaurant-title {
+  font-family: 'Georgia', serif; /* エレガントなフォント */
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  color: rgb(33, 31, 31); /* 落ち着いたダークグレー */
+  letter-spacing: 2px; /* 文字間隔を調整 */
+  text-transform: uppercase; /* 大文字化 */
+  border-bottom: 3px solid #ef8354; /* ゴールド風のライン */
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.restaurant-name{
+  margin-top: 30px;
+}
+
+/* レストラン紹介の縦スライダーのスタイル */
+.restaurant.slider{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 0 0 30px; /* 左側にドットのためのスペースを確保 */
+  box-sizing: border-box;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* 画像間の余白 */
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.slick-up,
+.slick-down {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 3;
+   cursor: pointer;/*マウスカーソルを指マークに*/
+   outline: none;/*クリックをしたら出てくる枠線を消す*/
+   border-bottom: 2px solid black;/*矢印の色*/
+   border-right: 2px solid black;/*矢印の色*/
+   height: 25px;
+   width: 25px;
+}
+
+.slick-up { /*戻る矢印の位置と形状*/
+  top: -20px;
+  transform: translateX(-50%) rotate(-135deg);
+} 
+
+.slick-down{ /* 次へ矢印の位置と形状 */
+   bottom: -20px;
+   transform: translateX(-50%) rotate(45deg);
+}
+
+.restaurant .slick-dots {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   left: -24px;  /* 画像の外側左に配置 */
+   top: 50%;
+   /* bottom: 30%; */
+   justify-content: center;
+   transform: translateY(-50%);
+   margin: 0;
+   z-index: 10;
+   gap: 4px;  /* ドット間の間隔 */
+}
+
+.restaurant .slick-dots li {
+  /* display: inline-block; */
+  margin: 5px 0;
+}
+
+.restaurant .slick-dots button {
+  font-size: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #aba7a7;
+  border: none;
+}
+
+.restaurant .slick-dots .slick-active button {
+  background: #050404;
+}
+
+
+
+/* 各お店の紹介 */
+    /* ページ全体のスタイル */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: gray;
+    }
+
+    /* メインのコンテナ */
+    .restaurant-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* 各店舗を囲むスタイル */
+    .restaurant {
+      position: relative;
+      border: 2px dashed #4e4a4a; /* 点線で囲む */
+      padding: 50px;
+      background-color: rgba(238, 193, 193, 0.94);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-sizing: border-box;
+      transition: all 0.5s;
+    }
+
+    /* ホバー時のエフェクト */
+.restaurant:hover {
+  background:  rgb(238, 193, 193);
+  transform: translateY(-8px); /* 浮き上がる感じ */
+  transition: all 0.5s;
+}
+
+    /* 写真のスタイル */
+    .restaurant img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* 店舗の情報部分 */
+    .restaurant-info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+    }
+
+    .restaurant-info div {
+      margin-bottom: 10px;
+    }
+
+    /* 住所と電話番号を二列で表示 */
+    .restaurant-info div span {
+      display: block;
+    }
+
+    .info {
+      display: inline-block;
+      width: 100%;
+    }
+
+    /* 店名、位置情報、住所、電話番号のスタイル */
+    h3 {
+      margin: 0 0 10px;
+    }
+
+    .google {
+      object-fit:cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 5%;
+    }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+      .info {
+        width: 100%;
+      }
+      
+      /* モバイル表示時のドット位置調整 */
+      .restaurant.slider {
+        padding: 0 0 0 20px;  /* 左の余白を調整 */
+      }
+      
+      .restaurant .slick-dots {
+        left: -18px;  /* 画像の外側左に配置（モバイル用） */
+      }
+      
+      .restaurant .slick-dots button {
+        width: 4px;  /* ドットのサイズを小さく */
+        height: 4px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .restaurant.slider {
+        padding: 0 0 0 15px;  /* さらに左の余白を調整 */
+      }
+      
+      .restaurant .slick-dots {
+        left: -12px;  /* 画像の外側左に配置（小画面用） */
+      }
+    }
+
+    /* スライダー全体のスタイル */
+.slider-container2 {
+  overflow: hidden;
+  width: 100%;
+  background-color: #f4f4f4; /* 背景色はお好みで */
+  padding: 20px 0;
+  background-image: url(../img/haikei.jpeg);
+  background-size: cover;
+}
+
+/* 画像が横並びになるように */
+.slider2 {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+.slider2 img {
+  width: 200px; /* 画像サイズ */
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.5s;
+  margin: 0 5px;
+}
+
+
+ /* ホバー時のエフェクト */
+ .slider2 img:hover {
+  background:  rgb(238, 193, 193);
+  transform: translateY(-5px); /* 浮き上がる感じ */
+  transition: all 0.5s;
+  }
+
+/* アニメーションの設定 */
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%); /* 半分動かして無限ループ風に */
+  }
+}
+
+    /* フッターのスタイル */
+    footer {
+      background-color: #4d5657;
+      color: white;
+      padding: 20px;
+      text-align: left;
+      position: relative;
+      width: 100%;
+      height: 80px;
+    }
+
+    /* 右下にテキストを配置 */
+    footer .created-by {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 14px;
+    }
