@@ -1,3 +1,31 @@
+//ロード画面
+// ページが読み込まれたら
+// window.addEventListener('load', function() {
+//   // 3秒後にロード画面を非表示にしてメインコンテンツを表示する
+//   setTimeout(function() {
+//       document.getElementById('loading-screen').style.display = 'none';
+//       document.getElementById('main-content').style.display = 'block';
+//   }, 2000); // 3000ミリ秒（＝3秒）
+// });
+
+window.onload = function() {
+  // ローディング画面を取得
+  const loadingScreen = document.getElementById("loading-screen");
+  const body = document.body;
+
+  // 1秒後にフェードアウト開始
+  setTimeout(() => {
+      loadingScreen.classList.add("fade-out");
+      body.classList.add("loaded");
+
+      // フェードアウト完了後にローディング画面を削除
+      setTimeout(() => {
+          loadingScreen.remove();
+      }, 1000);
+  }, 1000);
+};
+
+
 // ハンバーガーメニュー
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
@@ -16,29 +44,13 @@ document.querySelectorAll('.nav__item a').forEach(link => {
   });
 });
 
-// 下にスクロールしたらヘッダーが消えるやつ
-// const header = document.querySelector(".header");
-// const hamburgerMenu = document.querySelector(".hamburger");
-// let lastScrollY = window.scrollY;
-
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > lastScrollY) {
-    // 下にスクロールしたらヘッダーを隠す
-//     header.classList.add("hide");
-//   } else {
-//     // 上にスクロールしたらヘッダーを表示
-//     header.classList.remove("hide");
-//   }
-//   lastScrollY = window.scrollY;
-// });
-
 
 // 横スライド
 
 $(document).ready(function() {
   $(".regular").slick({
     autoplay: true, //スライダーの自動再生
-    autoplaySpeed: 3000,//次のスライドに切り替わる待ち時間
+    autoplaySpeed: 1500,//次のスライドに切り替わる待ち時間
     speed:1000,//スライドの動きのスピード。初期値は300。
     infinite: true,//スライドをループさせるかどうか。初期値はtrue。
     slidesToShow: 1,//スライドを画面に3枚見せる
@@ -86,6 +98,12 @@ responsive: [
   }
 ]
 
+// Tap to Discover ボタンをクリックしたらナビゲーションメニューを表示
+document.getElementById('tapButton').addEventListener('click', function() {
+  const navMenu = document.getElementById('navMenu');
+  navMenu.classList.toggle('active'); // activeクラスの追加/削除
+});
+
 // スムーズスクロール
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -115,27 +133,27 @@ $(document).ready(function(){
   });
 });
 
-//一番下のスライド
-$(function(){
-  $('.slider2').slick({
-    autoplay: true, //自動でスクロール
-    autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定
-    speed: 5000, //スライドが流れる速度を設定
-    cssEase: "linear", //スライドの流れ方を等速に設定
-    slidesToShow: 4, //表示するスライドの数
-    swipe: true, // 操作による切り替えはさせない
-    arrows: false, //矢印非表示
-    pauseOnFocus: false, //スライダーをフォーカスした時にスライドを停止させるか
-    pauseOnHover: true, //スライダーにマウスホバーした時にスライドを停止させるか
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 750,
-        settings: {
-          slidesToShow: 3, //画面幅750px以下でスライド3枚表示
-        }
-      }
-    ]
-  });
-});
 
+//最後のスライダー
+function autoHorizontalScroll(selector, speed = 2) {
+  let container = document.querySelector(selector);
+  if (!container) return;
+
+  function scroll() {
+      container.scrollLeft += speed; // 横スクロール
+
+      // スクロール量の割合を調べる
+      // 現在の横スクロール
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+          container.scrollLeft = 0; // 右端に達したら左端に戻る
+      }
+  }
+  let interval = setInterval(scroll, 30);
+  // ホバーで停止
+  container.addEventListener("mouseenter", () => clearInterval(interval));
+  container.addEventListener("mouseleave", () => {
+      interval = setInterval(scroll, 30);
+  });
+}
+// 例: #scroll-container を水平方向にスクロール
+autoHorizontalScroll(".slider2", 1);
