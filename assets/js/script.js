@@ -67,36 +67,36 @@ $(document).ready(function() {
   });
 });
 
-// レスポンシブ設定
-responsive: [
-  {
-    breakpoint: 1024, // 1024px以下
-    settings: {
-      slidesToShow: 2, // スライド2枚表示
-      slidesToScroll: 1,
-      arrows: true,
-      dots: true
-    }
-  },
-  {
-    breakpoint: 768, // 768px以下
-    settings: {
-      slidesToShow: 1, // スライド1枚表示
-      slidesToScroll: 1,
-      arrows: true,
-      dots: true
-    }
-  },
-  {
-    breakpoint: 480, // スマホサイズ
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false, // 矢印を非表示
-      dots: true
-    }
-  }
-]
+// // レスポンシブ設定
+// responsive: [
+//   {
+//     breakpoint: 1024, // 1024px以下
+//     settings: {
+//       slidesToShow: 2, // スライド2枚表示
+//       slidesToScroll: 1,
+//       arrows: true,
+//       dots: true
+//     }
+//   },
+//   {
+//     breakpoint: 768, // 768px以下
+//     settings: {
+//       slidesToShow: 1, // スライド1枚表示
+//       slidesToScroll: 1,
+//       arrows: true,
+//       dots: true
+//     }
+//   },
+//   {
+//     breakpoint: 480, // スマホサイズ
+//     settings: {
+//       slidesToShow: 1,
+//       slidesToScroll: 1,
+//       arrows: false, // 矢印を非表示
+//       dots: true
+//     }
+//   }
+// ]
 
 // Tap to Discover ボタンをクリックしたらナビゲーションメニューを表示
 document.getElementById('tapButton').addEventListener('click', function() {

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ハンバーガーメニュー</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -10,588 +10,1009 @@
     <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-   <!-- SlickのCDN読み込み -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Playfair+Display:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- SlickのCDN読み込み -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Playfair+Display:wght@400;600&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-
-<body>
-    <!-- ロード画面 -->
-    <!-- <div id="loading-screen">
-      <div class="loader"></div>
-      <p>ロード中...</p>
-    </div> -->
-
+  <body>
     <div id="loading-screen">
       <div class="loader">
-          <div class="loder"></div>
+        <div class="loder"></div>
       </div>
       <p class="loading-text">Lording...</p>
-  </div>
-  <script src="./assets/JS/loader.js"></script>
+    </div>
+    <script src="./assets/JS/loader.js"></script>
 
     <header class="header">
-        <div class="header__container">
-          <h1 class="header__logo"><a href="/"><img src="./assets/img/Header_logo.png" alt="" ></a></h1>
-           <div class="goo">
-            <p class="translate">translation→</p>
-            <div id="google_translate_element"></div>
-             <button type="button" class="hamburger">
-              <span></span>
-              <p class="menu">MENU</p>
-            </button>
-           </div>
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item"><a href="/">home</a></li>
-                <li class="nav__item"><a href="#restaurant1">Bistro</a></li>
-                <li class="nav__item"><a href="#restaurant2">Thai cuisine</a></li>
-                <li class="nav__item"><a href="#restaurant3">Italian</a></li>
-                <li class="nav__item"><a href="#restaurant4">Mexican</a></li>
-                <li class="nav__item"><a href="#restaurant5">Others</a></li>
-              </ul>
-            </nav>
+      <div class="header__container">
+        <h1 class="header__logo">
+          <a href="/"><img src="./assets/img/Header_logo.png" alt="" /></a>
+        </h1>
+        <div class="goo">
+          <p class="translate">translation→</p>
+          <div id="google_translate_element"></div>
+          <button type="button" class="hamburger">
+            <span></span>
+            <p class="menu">MENU</p>
+          </button>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="/">home</a></li>
+            <li class="nav__item"><a href="#restaurant1">Bistro</a></li>
+            <li class="nav__item"><a href="#restaurant2">Thai cuisine</a></li>
+            <li class="nav__item"><a href="#restaurant3">Italian</a></li>
+            <li class="nav__item"><a href="#restaurant4">Mexican</a></li>
+            <li class="nav__item"><a href="#restaurant5">Others</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <!-- Google翻訳ドロップダウン -->
 
     <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'ja',
-                includedLanguages: 'en',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "ja",
+            includedLanguages: "en",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
     </script>
 
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
 
- <!-- スライド1つ目 -->
+    <!-- スライド1つ目 -->
     <div class="sliderArea">
       <div class="regular slider">
-        <div><img src="./assets/img/slider1.jpeg" alt=""></div>
-        <div><img src="./assets/img/slider2.jpeg" alt=""></div>
-        <div><img src="./assets/img/slider3.jpeg" alt=""></div>
-        <div><img src="./assets/img/slider4.jpeg" alt=""></div>
-        <div><img src="./assets/img/slider5.jpeg" alt=""></div>
+        <div><img src="./assets/img/slider1.jpeg" alt="" /></div>
+        <div><img src="./assets/img/slider2.jpeg" alt="" /></div>
+        <div><img src="./assets/img/slider3.jpeg" alt="" /></div>
+        <div><img src="./assets/img/slider4.jpeg" alt="" /></div>
+        <div><img src="./assets/img/slider5.jpeg" alt="" /></div>
       </div>
-  </div>
+    </div>
 
-  <!-- サイト説明文 -->
-<section class="site-description">
-  <h2>Welcome to Gourmet Tokyo</h2>
-  <p>
-    東京近郊の美味しいご飯屋さんを厳選して紹介します。<br>
-    各ジャンルのおすすめレストランをお楽しみください。  
-  </p>
-  <p>
-    おしゃれな空間と絶品料理を堪能できるお店を探してみましょう！
-  </p>
-</section>
+    <!-- サイト説明文 -->
+    <section class="site-description">
+      <h2>Welcome to Gourmet Tokyo</h2>
+      <p>
+        東京近郊の美味しいご飯屋さんを厳選して紹介します。<br />
+        各ジャンルのおすすめレストランをお楽しみください。
+      </p>
+      <p>おしゃれな空間と絶品料理を堪能できるお店を探してみましょう！</p>
+    </section>
 
-<!-- Tap to Discover -->
-<p class="tap" id="tapButton">
-  <span class="nav-heading">What's Your Pick?</span><br>
-  <span class="arrow">↓</span>
-</p>
+    <!-- Tap to Discover -->
+    <p class="tap" id="tapButton">
+      <span class="nav-heading">What's Your Pick?</span><br />
+      <span class="arrow">↓</span>
+    </p>
 
-  <!-- メニュー（ナビゲーション） -->
-  <nav class="restaurant-nav" id="navMenu">
-    <a href="#restaurant1">Bistro</a>
-    <a href="#restaurant2">Thai cuisine</a>
-    <a href="#restaurant3">Italian</a>
-    <a href="#restaurant4">Mexican</a>
-    <a href="#restaurant5">Others</a>
-  </nav>
+    <!-- メニュー（ナビゲーション） -->
+    <nav class="restaurant-nav" id="navMenu">
+      <a href="#restaurant1">Bistro</a>
+      <a href="#restaurant2">Thai cuisine</a>
+      <a href="#restaurant3">Italian</a>
+      <a href="#restaurant4">Mexican</a>
+      <a href="#restaurant5">Others</a>
+    </nav>
 
-
-  <!-- 各お店の紹介 -->
-  <div id="restaurant1">
-    <h3 class="restaurant-title">Bistro</h3>
-    <div class="restaurant-container">
-      <!-- 店舗1 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/banban1.jpeg" alt="">
-          <img src="./assets/img/banban2.jpeg" alt="">
-          <img src="./assets/img/banban3.jpeg" alt="">
-          <img src="./assets/img/banban4.jpeg" alt="">
-          <img src="./assets/img/banban5.jpeg" alt="">
-          <img src="./assets/img/banban6.jpeg" alt="">
-          <img src="./assets/img/banban7.jpeg" alt="">
+    <!-- 各お店の紹介 -->
+    <div id="restaurant1">
+      <h3 class="restaurant-title">Bistro</h3>
+      <div class="restaurant-container">
+        <!-- 店舗1 -->
+        <div class="restaurant" id="banban">
+          <div class="slider">
+            <img src="./assets/img/banban1.jpeg" alt="" />
+            <img src="./assets/img/banban2.jpeg" alt="" />
+            <img src="./assets/img/banban3.jpeg" alt="" />
+            <img src="./assets/img/banban4.jpeg" alt="" />
+            <img src="./assets/img/banban5.jpeg" alt="" />
+            <img src="./assets/img/banban6.jpeg" alt="" />
+            <img src="./assets/img/banban7.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+              <h3 class="restaurant-name" style="font-size: 16px">
+                『カシワビストロ バンバン』
+              </h3>
+              <div class="info">
+                <span>〜地鶏料理が看板メニューのワインビストロ〜</span>
+              </div>
+              <div class="info">
+                <span>営業時間: 月-木 17:00-23:00</span
+                ><span style="margin-left: 72px">金 18:00-23:30</span
+                ><span style="margin-left: 72px">土 17:00-23:30</span
+                ><span style="margin-left: 72px">日 17:00-23:00</span>
+              </div>
+              <div class="info"><span>電話番号: 03-6416-4645</span></div>
+              <div class="info">
+                <span>住所: 東京都渋谷区神泉町2-8小島ハイツ1F</span>
+              </div>
+              <iframe
+                class="google"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7912800736126!2d139.69378229999998!3d35.6575137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188caa62a8ba6b%3A0xff9f51fc00036ebc!2z44GL44GX44KP44OT44K544OI44OtIOODkOODs-ODkOODsw!5e0!3m2!1sja!2sph!4v1741014315104!5m2!1sja!2sph"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+          </div>
         </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name" style="font-size: 16px;">『カシワビストロ バンバン』</h3>
-            <div class="info"><span>〜地鶏料理が看板メニューのワインビストロ〜</span></div>
-            <div class="info"><span>営業時間: 月-木 17:00-23:00<br><span style="margin-left:72px;">金 18:00-23:30</span><span style="margin-left:72px;">土 17:00-23:30</span><span style="margin-left:72px;">日 17:00-23:00</span></div>
-            <div class="info"><span>電話番号: 03-6416-4645</span></div>
-            <div class="info"><span>住所: 東京都渋谷区神泉町2-8小島ハイツ1F</span></div>
-            <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7912800736126!2d139.69378229999998!3d35.6575137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188caa62a8ba6b%3A0xff9f51fc00036ebc!2z44GL44GX44KP44OT44K544OI44OtIOODkOODs-ODkOODsw!5e0!3m2!1sja!2sph!4v1741014315104!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
 
+        <!-- 店舗2 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/drunkerd1.jpeg" alt="" />
+            <img src="./assets/img/drunkerd2.jpeg" alt="" />
+            <img src="./assets/img/drunkerd3.jpeg" alt="" />
+            <img src="./assets/img/drunkerd4.jpeg" alt="" />
+            <img src="./assets/img/drunkerd5.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+              <h3 class="restaurant-name">『ドランカー』</h3>
+              <div class="info">
+                <span
+                  >〜フレンチをベースに手作りのヨーロッパ料理が楽しめるビストロバー〜</span
+                >
+              </div>
+              <div class="info"><span>営業時間: 月-日 18:00-3:00</span></div>
+              <div class="info"><span>電話番号: 03-5422-8911</span></div>
+              <div class="info">
+                <span>住所: 東京都渋谷区恵比寿2丁目11-6</span>
+              </div>
+              <iframe
+                class="google"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.277114226365!2d139.7174599!3d35.645543599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b139bef6215%3A0x35aa1465173ee0d8!2z44OJ44Op44Oz44Kr44O8IOaBteavlOWvv-W6lw!5e0!3m2!1sja!2sph!4v1741014271874!5m2!1sja!2sph"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+          </div>
+        </div>
 
+        <!-- 店舗3 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/qwan1.jpeg" alt="" />
+            <img src="./assets/img/qwan2.jpeg" alt="" />
+            <img src="./assets/img/qwan3.jpeg" alt="" />
+            <img src="./assets/img/qwan4.jpeg" alt="" />
+            <img src="./assets/img/qwan5.jpeg" alt="" />
+            <img src="./assets/img/qwan6.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『QWAN』</h3>
+            <div class="info">
+              <span>〜学芸大学で地元客に支持されている隠れ家ビストロ〜</span>
+            </div>
+            <div class="info">
+              <span>営業時間: 月火木金 17:00-23:00</span
+              ><span style="margin-left: 72px">水 定休日</span
+              ><span style="margin-left: 72px">土日 15:00-22:00</span>
+            </div>
+            <div class="info"><span>電話番号: 050-5597-7542</span></div>
+            <div class="info">
+              <span>住所: 東京都目黒区五本木3丁目33-2</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.931567750943!2d139.6814642!3d35.6294135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4c8aee88a05%3A0xb48e88dbc26ce681!2sQWAN!5e0!3m2!1sja!2sph!4v1741014240272!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
-      <!-- 店舗2 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/drunkerd1.jpeg" alt="">
-          <img src="./assets/img/drunkerd2.jpeg" alt="">
-          <img src="./assets/img/drunkerd3.jpeg" alt="">
-          <img src="./assets/img/drunkerd4.jpeg" alt="">
-          <img src="./assets/img/drunkerd5.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『ドランカー』</h3>
-          <div class="info"><span>〜フレンチをベースに手作りのヨーロッパ料理が楽しめるビストロバー〜</span></div>
-          <div class="info"><span>営業時間: 月-日 18:00-3:00</span></div>
-          <div class="info"><span>電話番号: 03-5422-8911</span></div>
-          <div class="info"><span>住所: 東京都渋谷区恵比寿2丁目11-6</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.277114226365!2d139.7174599!3d35.645543599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b139bef6215%3A0x35aa1465173ee0d8!2z44OJ44Op44Oz44Kr44O8IOaBteavlOWvv-W6lw!5e0!3m2!1sja!2sph!4v1741014271874!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
-      <!-- 店舗3 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/qwan1.jpeg" alt="">
-          <img src="./assets/img/qwan2.jpeg" alt="">
-          <img src="./assets/img/qwan3.jpeg" alt="">
-          <img src="./assets/img/qwan4.jpeg" alt="">
-          <img src="./assets/img/qwan5.jpeg" alt="">
-          <img src="./assets/img/qwan6.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『QWAN』</h3>
-          <div class="info"><span>〜学芸大学で地元客に支持されている隠れ家ビストロ〜</span></div>
-          <div class="info"><span>営業時間: 月火木金 17:00-23:00</span><span style="margin-left:72px;">水 定休日</span><span style="margin-left:72px;">土日 15:00-22:00</span></div>
-          <div class="info"><span>電話番号: 050-5597-7542</span></div>
-          <div class="info"><span>住所: 東京都目黒区五本木3丁目33-2</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.931567750943!2d139.6814642!3d35.6294135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4c8aee88a05%3A0xb48e88dbc26ce681!2sQWAN!5e0!3m2!1sja!2sph!4v1741014240272!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    
-
-      <!-- 店舗4 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/ibukuro1.jpeg" alt="">
-          <img src="./assets/img/ibukuro2.jpeg" alt="">
-          <img src="./assets/img/ibukuro3.jpeg" alt="">
-          <img src="./assets/img/ibukuro4.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『胃袋にズキュン』</h3>
-          <div class="info"><span>〜昼はカフェ 夜はビストロとして営業するオールデイダイニング〜</span></div>
-          <div class="info"><span>営業時間: 月-金・日 11:00-21:00</span><span style="margin-left:72px;">土 11:00-22:00</span></div>
-          <div class="info"><span>電話番号: 090-1905-2122</span></div>
-          <div class="info"><span>住所: 東京都世田谷区北沢2丁目21-22 NANSEI PLUS</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6641129073814!2d139.66601699999998!3d35.660646299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f36af366a16f%3A0xc12f9b4002d5cc75!2z6IOD6KKL44Gr44K644Kt44Ol44Oz!5e0!3m2!1sja!2sph!4v1741014189222!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- 店舗4 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/ibukuro1.jpeg" alt="" />
+            <img src="./assets/img/ibukuro2.jpeg" alt="" />
+            <img src="./assets/img/ibukuro3.jpeg" alt="" />
+            <img src="./assets/img/ibukuro4.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『胃袋にズキュン』</h3>
+            <div class="info">
+              <span
+                >〜昼はカフェ
+                夜はビストロとして営業するオールデイダイニング〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-金・日 11:00-21:00</span
+              ><span style="margin-left: 72px">土 11:00-22:00</span>
+            </div>
+            <div class="info"><span>電話番号: 090-1905-2122</span></div>
+            <div class="info">
+              <span>住所: 東京都世田谷区北沢2丁目21-22 NANSEI PLUS</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6641129073814!2d139.66601699999998!3d35.660646299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f36af366a16f%3A0xc12f9b4002d5cc75!2z6IOD6KKL44Gr44K644Kt44Ol44Oz!5e0!3m2!1sja!2sph!4v1741014189222!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="restaurant2">
-    <h3 class="restaurant-title">Thai Cuisine</h3>
-    <div class="restaurant-container">
-      <!-- 店舗5 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/kurumi1.jpeg" alt="">
-          <img src="./assets/img/kurumi2.jpeg" alt="">
-          <img src="./assets/img/kurumi3.jpeg" alt="">
-          <img src="./assets/img/kurumi4.jpeg" alt="">
-          <img src="./assets/img/kurumi5.jpeg" alt="">
-          <img src="./assets/img/kurumi6.jpeg" alt="">
-          <img src="./assets/img/kurumi7.jpeg" alt="">
-          <img src="./assets/img/kurumi8.jpeg" alt="">
+    <div id="restaurant2">
+      <h3 class="restaurant-title">Thai Cuisine</h3>
+      <div class="restaurant-container">
+        <!-- 店舗5 -->
+        <div class="restaurant" id="kurumi">
+          <div class="slider">
+            <img src="./assets/img/kurumi1.jpeg" alt="" />
+            <img src="./assets/img/kurumi2.jpeg" alt="" />
+            <img src="./assets/img/kurumi3.jpeg" alt="" />
+            <img src="./assets/img/kurumi4.jpeg" alt="" />
+            <img src="./assets/img/kurumi5.jpeg" alt="" />
+            <img src="./assets/img/kurumi6.jpeg" alt="" />
+            <img src="./assets/img/kurumi7.jpeg" alt="" />
+            <img src="./assets/img/kurumi8.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『タイ食堂 くるみ』</h3>
+            <div class="info">
+              <span>〜海外文化を取り入れた新時代のタイ料理〜</span>
+            </div>
+            <div class="info">
+              <span>営業時間: 月-木 17:00-23:00</span
+              ><span style="margin-left: 72px">金 17:00-0:00</span
+              ><span style="margin-left: 72px">土日 12:00-23:00</span>
+            </div>
+            <div class="info"><span>電話番号: 03-6420-3067</span></div>
+            <div class="info">
+              <span
+                >住所: 東京都品川区上大崎2丁目26-5 メグロードビル 地下1階</span
+              >
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.741061430491!2d139.71469349999998!3d35.6341095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bd33543fd2d%3A0x4a8f4642af316bdc!2z44K_44Kk6aOf5aCCIOOBj-OCi-OBvw!5e0!3m2!1sja!2sph!4v1741014048007!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『タイ食堂 くるみ』</h3>
-          <div class="info"><span>〜海外文化を取り入れた新時代のタイ料理〜</span></div>
-          <div class="info"><span>営業時間: 月-木 17:00-23:00</span><span style="margin-left:72px;">金 17:00-0:00</span><span style="margin-left:72px;">土日 12:00-23:00</span></div>
-          <div class="info"><span>電話番号: 03-6420-3067</span></div>
-          <div class="info"><span>住所: 東京都品川区上大崎2丁目26-5 メグロードビル 地下1階</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.741061430491!2d139.71469349999998!3d35.6341095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bd33543fd2d%3A0x4a8f4642af316bdc!2z44K_44Kk6aOf5aCCIOOBj-OCi-OBvw!5e0!3m2!1sja!2sph!4v1741014048007!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
 
-      <!-- 店舗6 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/chao1.jpeg" alt="">
-          <img src="./assets/img/chao2.jpeg" alt="">
-          <img src="./assets/img/chao3.jpeg" alt="">
+        <!-- 店舗6 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/chao1.jpeg" alt="" />
+            <img src="./assets/img/chao2.jpeg" alt="" />
+            <img src="./assets/img/chao3.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name" style="font-size: 18px">
+              『チャオチャオバンブー』
+            </h3>
+            <div class="info">
+              <span
+                >〜本格的なアジア料理店で有名な『チャオバンブー』の2号店〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-日 11:00-21:30</span
+              ><span style="margin-left: 72px">&nbsp;水 定休日</span>
+            </div>
+            <div class="info"><span>電話番号: 03-5466-4887</span></div>
+            <div class="info">
+              <span>住所: 東京都渋谷区神宮前6丁目7-12J プラネッツ神宮前</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.400898136277!2d139.7058697!3d35.6671295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca40fcccc5f%3A0xd34c7d79537d60af!2z44OB44Oj44Kq44OB44Oj44Kq44OQ44Oz44OW44O8!5e0!3m2!1sja!2sph!4v1741013978292!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name" style="font-size: 18px;">『チャオチャオバンブー』</h3>
-          <div class="info"><span>〜本格的なアジア料理店で有名な『チャオバンブー』の2号店〜</span></div>
-          <div class="info"><span>営業時間: 月-日 11:00-21:30</span><span style="margin-left:72px;">&nbsp;水 定休日</span></div>
-          <div class="info"><span>電話番号: 03-5466-4887</span></div>
-          <div class="info"><span>住所: 東京都渋谷区神宮前6丁目7-12J プラネッツ神宮前</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.400898136277!2d139.7058697!3d35.6671295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca40fcccc5f%3A0xd34c7d79537d60af!2z44OB44Oj44Kq44OB44Oj44Kq44OQ44Oz44OW44O8!5e0!3m2!1sja!2sph!4v1741013978292!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
 
-      <!-- 店舗7 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/ginger1.jpeg" alt="">
-          <img src="./assets/img/ginger2.jpeg" alt="">
-          <img src="./assets/img/ginger3.jpeg" alt="">
+        <!-- 店舗7 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/ginger1.jpeg" alt="" />
+            <img src="./assets/img/ginger2.jpeg" alt="" />
+            <img src="./assets/img/ginger3.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">
+              『GINGER GRASS modern thai vietnamese』
+            </h3>
+            <div class="info">
+              <span
+                >〜"刺激的でスパイシーなタイ料理"と"たっぷりの野菜とハーブを使ったベトナム料理"をミックスしたモダンアジアン〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-土 11:00-23:00</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日 11:00-22:00</span
+              >
+            </div>
+            <div class="info"><span>電話番号: 03-6630-0004</span></div>
+            <div class="info">
+              <span
+                >住所: 東京都渋谷区代々木２丁目２−１ 小田急サザンタワー
+                1階</span
+              >
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.6182761333343!2d139.700471!3d35.6864001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dd54e8a7caf%3A0x3f6efc05f5246fca!2sGINGER%20GRASS%20modern%20thai%20vietnamese!5e0!3m2!1sja!2sph!4v1741013940660!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『GINGER GRASS modern thai vietnamese』</h3>
-          <div class="info"><span>〜"刺激的でスパイシーなタイ料理"と"たっぷりの野菜とハーブを使ったベトナム料理"をミックスしたモダンアジアン〜</span></div>
-          <div class="info"><span>営業時間: 月-土 11:00-23:00</span><span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日 11:00-22:00</span></div>
-          <div class="info"><span>電話番号: 03-6630-0004</span></div>
-          <div class="info"><span>住所: 東京都渋谷区代々木２丁目２−１ 小田急サザンタワー 1階</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.6182761333343!2d139.700471!3d35.6864001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dd54e8a7caf%3A0x3f6efc05f5246fca!2sGINGER%20GRASS%20modern%20thai%20vietnamese!5e0!3m2!1sja!2sph!4v1741013940660!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
 
-      <!-- 店舗8 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/yamu1.jpeg" alt="">
-          <img src="./assets/img/yamu2.jpeg" alt="">
-          <img src="./assets/img/yamu3.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『タイ・イサーン料理<br>ヤムヤム恵比寿』</h3>
-          <div class="info"><span>〜4ツ星ホテル出身の実力派シェフによる本場のタイ料理〜</span></div>
-          <div class="info"><span>営業時間: 月-金 11:00-14:00<span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-23:00</span><span style="margin-left:72px;">土日 11:00-15:00</span><span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-22:45</span></div>
-          <div class="info"><span>電話番号: 03-5422-8911</span></div>
-          <div class="info"><span>住所: 東京都渋谷区恵比寿西1丁目12-10 サンエイビル 1階</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.209950659123!2d139.7073823!3d35.647198599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bef88519185%3A0xc4bd102c6e4fe8ed!2z44K_44Kk44O744Kk44K144O844Oz5paZ55CG44Ok44Og44Ok44OgIOaBteavlOWvvw!5e0!3m2!1sja!2sph!4v1741013880907!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- 店舗8 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/yamu1.jpeg" alt="" />
+            <img src="./assets/img/yamu2.jpeg" alt="" />
+            <img src="./assets/img/yamu3.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">
+              『タイ・イサーン料理<br />ヤムヤム恵比寿』
+            </h3>
+            <div class="info">
+              <span>〜4ツ星ホテル出身の実力派シェフによる本場のタイ料理〜</span>
+            </div>
+            <div class="info">
+              <span>営業時間: 月-金 11:00-14:00</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-23:00</span
+              ><span style="margin-left: 72px">土日 11:00-15:00</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-22:45</span
+              >
+            </div>
+            <div class="info"><span>電話番号: 03-5422-8911</span></div>
+            <div class="info">
+              <span>住所: 東京都渋谷区恵比寿西1丁目12-10 サンエイビル 1階</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.209950659123!2d139.7073823!3d35.647198599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bef88519185%3A0xc4bd102c6e4fe8ed!2z44K_44Kk44O744Kk44K144O844Oz5paZ55CG44Ok44Og44Ok44OgIOaBteavlOWvvw!5e0!3m2!1sja!2sph!4v1741013880907!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="restaurant3">
-    <h3 class="restaurant-title">Italian</h3>
-    <div class="restaurant-container">
-      <!-- 店舗9 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/gnudi1.jpeg" alt="">
-          <img src="./assets/img/gnudi2.jpeg" alt="">
-          <img src="./assets/img/gnudi3.jpeg" alt="">
-          <img src="./assets/img/gnudi4.jpeg" alt="">
-          <img src="./assets/img/gnudi5.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『gnudi』</h3>
-            <div class="info"><span>〜自然派ワインとイタリア料理 深夜まで楽しめる街のイタリアン食堂〜</span></div>
-            <div class="info"><span>営業時間: 月・日 定休日<span style="margin-left:72px;">火-金 17:00-0:00</span><span style="margin-left:72px;">土 15:00-23:00</span></div>
+    <div id="restaurant3">
+      <h3 class="restaurant-title">Italian</h3>
+      <div class="restaurant-container">
+        <!-- 店舗9 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/gnudi1.jpeg" alt="" />
+            <img src="./assets/img/gnudi2.jpeg" alt="" />
+            <img src="./assets/img/gnudi3.jpeg" alt="" />
+            <img src="./assets/img/gnudi4.jpeg" alt="" />
+            <img src="./assets/img/gnudi5.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『gnudi』</h3>
+            <div class="info">
+              <span
+                >〜自然派ワインとイタリア料理
+                深夜まで楽しめる街のイタリアン食堂〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月・日 定休日</span
+              ><span style="margin-left: 72px">火-金 17:00-0:00</span
+              ><span style="margin-left: 72px">土 15:00-23:00</span>
+            </div>
             <div class="info"><span>電話番号: 03-6438-9392</span></div>
-            <div class="info"><span>住所: 東京都渋谷区神宮前3丁目41-2 岡本ビル 1階</span></div>
-            <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.241752270867!2d139.71362929999998!3d35.671048899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188de4f198f3ed%3A0xca2e20d7ef302f2f!2sgnudi!5e0!3m2!1sja!2sph!4v1741013809663!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="info">
+              <span>住所: 東京都渋谷区神宮前3丁目41-2 岡本ビル 1階</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.241752270867!2d139.71362929999998!3d35.671048899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188de4f198f3ed%3A0xca2e20d7ef302f2f!2sgnudi!5e0!3m2!1sja!2sph!4v1741013809663!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-      </div>
 
+        <!-- 店舗10 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/mokita1.jpeg" alt="" />
+            <img src="./assets/img/mokita2.jpeg" alt="" />
+            <img src="./assets/img/mokita3.jpeg" alt="" />
+            <img src="./assets/img/mokita4.jpeg" alt="" />
+            <img src="./assets/img/mokita5.jpeg" alt="" />
+            <img src="./assets/img/mokita6.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『Mokita 代々木上原店』</h3>
+            <div class="info">
+              <span>〜居酒屋のように日常使いができる本格イタリアン〜</span>
+            </div>
+            <div class="info">
+              <span>営業時間: 月-金 11:30-15:00</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:30-23:00</span
+              >
+            </div>
+            <div class="info"><span>電話番号: 070-9262-6812</span></div>
+            <div class="info">
+              <span>住所: 東京都渋谷区西原3丁目4-5 ヤマダビル</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2769172032195!2d139.68169600000004!3d35.67018290000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3154f4a9f4f%3A0xa4affe94b97db34e!2zTW9raXRh44Oi44Kt44K_IOS7o-OAheacqOS4iuWOn-W6lw!5e0!3m2!1sja!2sph!4v1741013733061!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
+        <!-- 店舗11 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/life1.jpeg" alt="" />
+            <img src="./assets/img/life2.jpeg" alt="" />
+            <img src="./assets/img/life3.jpeg" alt="" />
+            <img src="./assets/img/life4.jpeg" alt="" />
+            <img src="./assets/img/life5.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『イタリアン LIFE』</h3>
+            <div class="info">
+              <span
+                >〜2003年のオープン以来
+                地元の住人たちに深く愛されてきた名店〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 火 定休日</span
+              ><span style="margin-left: 72px">月-日 11:45-14:30</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:30-21:00</span
+              >
+            </div>
+            <div class="info"><span>電話番号: 03-3467-3479</span></div>
+            <div class="info">
+              <span>住所: 東京都渋谷区富ケ谷1丁目9-19</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.352300039327!2d139.6903164!3d35.668326400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f34cb8469359%3A0x5db8c683f1506738!2z44Kk44K_44Oq44Ki44OzIExJRkU!5e0!3m2!1sja!2sph!4v1741013696308!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
-      <!-- 店舗10 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/mokita1.jpeg" alt="">
-          <img src="./assets/img/mokita2.jpeg" alt="">
-          <img src="./assets/img/mokita3.jpeg" alt="">
-          <img src="./assets/img/mokita4.jpeg" alt="">
-          <img src="./assets/img/mokita5.jpeg" alt="">
-          <img src="./assets/img/mokita6.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『Mokita 代々木上原店』</h3>
-          <div class="info"><span>〜居酒屋のように日常使いができる本格イタリアン〜</span></div>
-          <div class="info"><span>営業時間: 月-金 11:30-15:00<span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:30-23:00</span></div>
-          <div class="info"><span>電話番号: 070-9262-6812</span></div>
-          <div class="info"><span>住所: 東京都渋谷区西原3丁目4-5 ヤマダビル</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2769172032195!2d139.68169600000004!3d35.67018290000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3154f4a9f4f%3A0xa4affe94b97db34e!2zTW9raXRh44Oi44Kt44K_IOS7o-OAheacqOS4iuWOn-W6lw!5e0!3m2!1sja!2sph!4v1741013733061!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
-      <!-- 店舗11 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/life1.jpeg" alt="">
-          <img src="./assets/img/life2.jpeg" alt="">
-          <img src="./assets/img/life3.jpeg" alt="">
-          <img src="./assets/img/life4.jpeg" alt="">
-          <img src="./assets/img/life5.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『イタリアン LIFE』</h3>
-          <div class="info"><span>〜2003年のオープン以来 地元の住人たちに深く愛されてきた名店〜</span></div>
-          <div class="info"><span>営業時間: 火 定休日</span><span style="margin-left:72px;">月-日 11:45-14:30</span><span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:30-21:00</span></div>
-          <div class="info"><span>電話番号: 03-3467-3479</span></div>
-          <div class="info"><span>住所: 東京都渋谷区富ケ谷1丁目9-19</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.352300039327!2d139.6903164!3d35.668326400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f34cb8469359%3A0x5db8c683f1506738!2z44Kk44K_44Oq44Ki44OzIExJRkU!5e0!3m2!1sja!2sph!4v1741013696308!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    
-
-      <!-- 店舗12 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/./luce1.jpeg" alt="">
-          <img src="./assets/img/./luce2.jpeg" alt="">
-          <img src="./assets/img/./luce3.jpeg" alt="">
-          <img src="./assets/img/./luce4.jpeg" alt="">
-          <img src="./assets/img/./luce5.jpeg" alt="">
-          <img src="./assets/img/./luce6.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『LUCE』</h3>
-          <div class="info"><span>〜イタリア郷土料理と自然派ワインが100種類が楽しめるアーバン&ナチュラルなお店〜</span></div>
-          <div class="info"><span>営業時間: 火 定休日</span><span style="margin-left:72px;">月-金 17:00-23:00</span><span style="margin-left:72px;">土日 12:00-23:00</span></div>
-          <div class="info"><span>電話番号: 090-1905-2122</span></div>
-          <div class="info"><span>住所: 東京都渋谷区富ケ谷1丁目51-12 代々木公園ハウス 1F-A</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.335599573018!2d139.6891233!3d35.66873770000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3e5e819a061%3A0x21cba892c67048e0!2sLUCE!5e0!3m2!1sja!2sph!4v1741013639074!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- 店舗12 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/./luce1.jpeg" alt="" />
+            <img src="./assets/img/./luce2.jpeg" alt="" />
+            <img src="./assets/img/./luce3.jpeg" alt="" />
+            <img src="./assets/img/./luce4.jpeg" alt="" />
+            <img src="./assets/img/./luce5.jpeg" alt="" />
+            <img src="./assets/img/./luce6.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『LUCE』</h3>
+            <div class="info">
+              <span
+                >〜イタリア郷土料理と自然派ワインが100種類が楽しめるアーバン&ナチュラルなお店〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 火 定休日</span
+              ><span style="margin-left: 72px">月-金 17:00-23:00</span
+              ><span style="margin-left: 72px">土日 12:00-23:00</span>
+            </div>
+            <div class="info"><span>電話番号: 090-1905-2122</span></div>
+            <div class="info">
+              <span
+                >住所: 東京都渋谷区富ケ谷1丁目51-12 代々木公園ハウス 1F-A</span
+              >
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.335599573018!2d139.6891233!3d35.66873770000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3e5e819a061%3A0x21cba892c67048e0!2sLUCE!5e0!3m2!1sja!2sph!4v1741013639074!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="restaurant4">
-    <h3 class="restaurant-title">Mexican</h3>
-    <div class="restaurant-container">
-      <!-- 店舗13 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/hacienda1.jpeg" alt="">
-          <img src="./assets/img/hacienda2.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『Hacienda del cielo MODERN MEXICANO』</h3>
-            <div class="info"><span>〜モダンなメキシコ料理を提供するカラフルでカジュアルなレストラン〜</span></div>
-            <div class="info"><span>営業時間: 月-金 11:30-23:00<span style="margin-left:72px;">土 11:00-23:00</span><span style="margin-left:72px;">日 11:00-22:00</span></div>
+    <div id="restaurant4">
+      <h3 class="restaurant-title">Mexican</h3>
+      <div class="restaurant-container">
+        <!-- 店舗13 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/hacienda1.jpeg" alt="" />
+            <img src="./assets/img/hacienda2.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">
+              『Hacienda del cielo MODERN MEXICANO』
+            </h3>
+            <div class="info">
+              <span
+                >〜モダンなメキシコ料理を提供するカラフルでカジュアルなレストラン〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-金 11:30-23:00</span
+              ><span style="margin-left: 72px">土 11:00-23:00</span
+              ><span style="margin-left: 72px">日 11:00-22:00</span>
+            </div>
             <div class="info"><span>電話番号: 03-5457-1521</span></div>
             <div class="info"><span>住所: 東京都渋谷区猿楽町10-1 9F</span></div>
-            <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.0789028964678!2d139.7025852!3d35.65042759999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b454758150f%3A0x911db2c2dfc8b756!2sHacienda%20del%20cielo%20MODERN%20MEXICANO!5e0!3m2!1sja!2sph!4v1741013580659!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.0789028964678!2d139.7025852!3d35.65042759999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b454758150f%3A0x911db2c2dfc8b756!2sHacienda%20del%20cielo%20MODERN%20MEXICANO!5e0!3m2!1sja!2sph!4v1741013580659!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-      </div>
 
+        <!-- 店舗14 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/el1.jpeg" alt="" />
+            <img src="./assets/img/el2.jpeg" alt="" />
+            <img src="./assets/img/el3.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『el caliente modern mexicano』</h3>
+            <div class="info">
+              <span
+                >〜定番のメキシコ料理と飲み物を楽しめる広々としたにぎやかなレストラン〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-土 11:00-23:00</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日 11:00-22:00</span
+              >
+            </div>
+            <div class="info"><span>電話番号: 03-5495-7261</span></div>
+            <div class="info">
+              <span>住所: 東京都港区港南2丁目18-1 アトレ品川 4F</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.941640125701!2d139.7405423!3d35.6291652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188a5a94d897cf%3A0x3f682fc7bc9ff9b3!2sel%20caliente%20modern%20mexicano!5e0!3m2!1sja!2sph!4v1741013532893!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
+        <!-- 店舗15 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/las1.jpeg" alt="" />
+            <img src="./assets/img/las2.jpeg" alt="" />
+            <img src="./assets/img/las3.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">
+              『LAS DOS CARAS MODERN MEXICANO Y TACOS』
+            </h3>
+            <div class="info">
+              <span
+                >〜タコスやブリトー
+                小皿料理を提供する2階建てのおしゃれなレストラン〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-金 11:30-15:00</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-22:00</span
+              ><span style="margin-left: 72px">土 11:30-23:00</span
+              ><span style="margin-left: 72px">日 11:30-22:00</span>
+            </div>
+            <div class="info"><span>電話番号: 03-6631-1111</span></div>
+            <div class="info">
+              <span
+                >住所: 東京都渋谷区神宮前1丁目10-37 CASCADE HARAJUKU1F B1</span
+              >
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.281123951542!2d139.7037585!3d35.6700793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca52a84f409%3A0xe2d7a9fe4bb58147!2sLAS%20DOS%20CARAS%20MODERN%20MEXICANO%20Y%20TACOS!5e0!3m2!1sja!2sph!4v1741013443399!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
-      <!-- 店舗14 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/el1.jpeg" alt="">
-          <img src="./assets/img/el2.jpeg" alt="">
-          <img src="./assets/img/el3.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『el caliente modern mexicano』</h3>
-          <div class="info"><span>〜定番のメキシコ料理と飲み物を楽しめる広々としたにぎやかなレストラン〜</span></div>
-          <div class="info"><span>営業時間: 月-土 11:00-23:00</span><span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日 11:00-22:00</span></div>
-          <div class="info"><span>電話番号: 03-5495-7261</span></div>
-          <div class="info"><span>住所: 東京都港区港南2丁目18-1 アトレ品川 4F</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.941640125701!2d139.7405423!3d35.6291652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188a5a94d897cf%3A0x3f682fc7bc9ff9b3!2sel%20caliente%20modern%20mexicano!5e0!3m2!1sja!2sph!4v1741013532893!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
-      <!-- 店舗15 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/las1.jpeg" alt="">
-          <img src="./assets/img/las2.jpeg" alt="">
-          <img src="./assets/img/las3.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『LAS DOS CARAS MODERN MEXICANO Y TACOS』</h3>
-          <div class="info"><span>〜タコスやブリトー 小皿料理を提供する2階建てのおしゃれなレストラン〜</span></div>
-          <div class="info"><span>営業時間: 月-金 11:30-15:00</span><span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-22:00</span><span style="margin-left:72px;">土 11:30-23:00</span><span style="margin-left:72px;">日 11:30-22:00</span></div>
-          <div class="info"><span>電話番号: 03-6631-1111</span></div>
-          <div class="info"><span>住所: 東京都渋谷区神宮前1丁目10-37 CASCADE HARAJUKU1F B1</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.281123951542!2d139.7037585!3d35.6700793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca52a84f409%3A0xe2d7a9fe4bb58147!2sLAS%20DOS%20CARAS%20MODERN%20MEXICANO%20Y%20TACOS!5e0!3m2!1sja!2sph!4v1741013443399!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    
-
-      <!-- 店舗16 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/remember1.jpeg" alt="">
-          <img src="./assets/img/remember2.jpeg" alt="">
-          <img src="./assets/img/remember3.jpeg" alt="">
-          <img src="./assets/img/remember4.jpeg" alt="">
-          <img src="./assets/img/remember5.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『フォンダ・デ・ラ・マドゥルガーダ』</h3>
-          <div class="info"><span>〜メキシコ風のカラフルなレストラン タコスやグリルした肉料理などを提供〜</span></div>
-          <div class="info"><span>営業時間: 月-木・日 16:00-22:30</span><span style="margin-left:72px;">金土 16:00-23:00</span></div>
-          <div class="info"><span>電話番号: 090-1905-2122</span></div>
-          <div class="info"><span>住所: 東京都渋谷区神宮前2丁目33-12 ビラ・ビアンカ B1</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.141901754296!2d139.7080905!3d35.67350779999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cbcf29aa0dd%3A0xcdc5eb4829c765bc!2z44OV44Kp44Oz44OA44O744OH44O744Op44O744Oe44OJ44Kl44Or44Ks44O844OA!5e0!3m2!1sja!2sph!4v1741013398295!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- 店舗16 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/remember1.jpeg" alt="" />
+            <img src="./assets/img/remember2.jpeg" alt="" />
+            <img src="./assets/img/remember3.jpeg" alt="" />
+            <img src="./assets/img/remember4.jpeg" alt="" />
+            <img src="./assets/img/remember5.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">
+              『フォンダ・デ・ラ・マドゥルガーダ』
+            </h3>
+            <div class="info">
+              <span
+                >〜メキシコ風のカラフルなレストラン
+                タコスやグリルした肉料理などを提供〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-木・日 16:00-22:30</span
+              ><span style="margin-left: 72px">金土 16:00-23:00</span>
+            </div>
+            <div class="info"><span>電話番号: 090-1905-2122</span></div>
+            <div class="info">
+              <span>住所: 東京都渋谷区神宮前2丁目33-12 ビラ・ビアンカ B1</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.141901754296!2d139.7080905!3d35.67350779999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cbcf29aa0dd%3A0xcdc5eb4829c765bc!2z44OV44Kp44Oz44OA44O744OH44O744Op44O744Oe44OJ44Kl44Or44Ks44O844OA!5e0!3m2!1sja!2sph!4v1741013398295!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="restaurant5">
-    <h3 class="restaurant-title">Others</h3>
-    <div class="restaurant-container">
-      <!-- 店舗17 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/aux1.jpeg" alt="">
-          <img src="./assets/img/aux2.jpeg" alt="">
-          <img src="./assets/img/aux3.jpeg" alt="">
-          <img src="./assets/img/aux4.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『aux』</h3>
-            <div class="info"><span>〜文化・国境を超えた創作料理を提供するJapanese"IZAKAYA"restaurant〜</span></div>
-            <div class="info"><span>営業時間: 月-日 11:30-15:30<br><span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-0:00</span></div>
+    <div id="restaurant5">
+      <h3 class="restaurant-title">Others</h3>
+      <div class="restaurant-container">
+        <!-- 店舗17 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/aux1.jpeg" alt="" />
+            <img src="./assets/img/aux2.jpeg" alt="" />
+            <img src="./assets/img/aux3.jpeg" alt="" />
+            <img src="./assets/img/aux4.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『aux』</h3>
+            <div class="info">
+              <span
+                >〜文化・国境を超えた創作料理を提供するジャパニーズ居酒屋レストラン〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-日 11:30-15:30<br></span>
+              <span style="margin-left: 72px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-0:00
+              </span>
+            </div>
             <div class="info"><span>電話番号: 03-6804-8131</span></div>
-            <div class="info"><span>住所: 東京都渋谷区上原1丁目1-23 auxビル 1F</span></div>
-            <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.336034039004!2d139.687611!3d35.668727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f34b8dda30fb%3A0xf331677a633f82d9!2saux!5e0!3m2!1sja!2sph!4v1741013260451!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="info">
+              <span>住所: 東京都渋谷区元代々木町5-2 NYCmotoyoyogi 2F</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.336034039004!2d139.687611!3d35.668727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f34b8dda30fb%3A0xf331677a633f82d9!2saux!5e0!3m2!1sja!2sph!4v1741013260451!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-      </div>
 
+        <!-- 店舗18 -->
+        <div class="restaurant" id="nakayoshi">
+          <div class="slider">
+            <img src="./assets/img/nakayosi1.jpeg" alt="" />
+            <img src="./assets/img/nakayosi2.jpeg" alt="" />
+            <img src="./assets/img/nakayosi3.jpeg" alt="" />
+            <img src="./assets/img/nakayosi4.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">
+              『恵比寿 土鍋炊ごはん<br />なかよし 本店』
+            </h3>
+            <div class="info">
+              <span
+                >〜恵比寿・渋谷・目黒・丸の内・水道橋など11店舗を展開〜</span
+              >
+            </div>
+            <div class="info"><span>営業時間: 月-日 11:00-23:00</span></div>
+            <div class="info"><span>電話番号: 03-3496-4795</span></div>
+            <div class="info">
+              <span>住所: 東京都渋谷区恵比寿西１丁目８−２</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.186599018366!2d139.708139!3d35.64777399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b500790b0c1%3A0xdb5a8531c46ba95f!2z5oG15q-U5a-_IOWcn-mNi-eCiuOBlOOBr-OCkyDjgarjgYvjgojjgZcg5pys5bqX!5e0!3m2!1sja!2sph!4v1741013207262!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
+        <!-- 店舗19 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/pep1.jpeg" alt="" />
+            <img src="./assets/img/pep2.jpeg" alt="" />
+            <img src="./assets/img/pep3.jpeg" alt="" />
+            <img src="./assets/img/pep4.jpeg" alt="" />
+            <img src="./assets/img/pep5.jpeg" alt="" />
+            <img src="./assets/img/pep6.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">『PEP spanish bar』</h3>
+            <div class="info">
+              <span>〜シェフによる本格スペイン料理が楽しめる隠れ家バル〜</span>
+            </div>
+            <div class="info">
+              <span>営業時間: 月-金 11:30-15:00</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-23:00</span
+              ><span style="margin-left: 72px">土 11:30-23:00</span
+              ><span style="margin-left: 72px">日 11:30-22:00</span>
+            </div>
+            <div class="info"><span>電話番号: 0422-27-6083</span></div>
+            <div class="info">
+              <span
+                >住所: 東京都武蔵野市吉祥寺本町1丁目34-2 佐藤アパート 2F</span
+              >
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.918493372311!2d139.5838259!3d35.70362329999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ee38b30737e7%3A0xc7f79daec5e4c306!2sPEP%20spanish%20bar!5e0!3m2!1sja!2sph!4v1741013077582!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
-      <!-- 店舗18 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/nakayosi1.jpeg" alt="">
-          <img src="./assets/img/nakayosi2.jpeg" alt="">
-          <img src="./assets/img/nakayosi3.jpeg" alt="">
-          <img src="./assets/img/nakayosi4.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『恵比寿 土鍋炊ごはん<br>なかよし 本店』</h3>
-          <div class="info"><span>〜恵比寿・渋谷・目黒・丸の内・水道橋など11店舗を展開〜</span></div>
-          <div class="info"><span>営業時間: 月-日 11:00-23:00</span></div>
-          <div class="info"><span>電話番号: 03-3496-4795</span></div>
-          <div class="info"><span>住所: 東京都渋谷区恵比寿西１丁目８−２</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.186599018366!2d139.708139!3d35.64777399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b500790b0c1%3A0xdb5a8531c46ba95f!2z5oG15q-U5a-_IOWcn-mNi-eCiuOBlOOBr-OCkyDjgarjgYvjgojjgZcg5pys5bqX!5e0!3m2!1sja!2sph!4v1741013207262!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
-      <!-- 店舗19 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/pep1.jpeg" alt="">
-          <img src="./assets/img/pep2.jpeg" alt="">
-          <img src="./assets/img/pep3.jpeg" alt="">
-          <img src="./assets/img/pep4.jpeg" alt="">
-          <img src="./assets/img/pep5.jpeg" alt="">
-          <img src="./assets/img/pep6.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『PEP spanish bar』</h3>
-          <div class="info"><span>〜シェフによる本格スペイン料理が楽しめる隠れ家バル〜</span></div>
-          <div class="info"><span>営業時間: 月-金 11:30-15:00</span><span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:00-23:00</span><span style="margin-left:72px;">土 11:30-23:00</span><span style="margin-left:72px;">日 11:30-22:00</span></div>
-          <div class="info"><span>電話番号: 0422-27-6083</span></div>
-          <div class="info"><span>住所: 東京都武蔵野市吉祥寺本町1丁目34-2 佐藤アパート 2F</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.918493372311!2d139.5838259!3d35.70362329999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ee38b30737e7%3A0xc7f79daec5e4c306!2sPEP%20spanish%20bar!5e0!3m2!1sja!2sph!4v1741013077582!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    
-
-      <!-- 店舗20 -->
-      <div class="restaurant">
-        <div class="slider">
-          <img src="./assets/img/miryu1.jpeg" alt="">
-          <img src="./assets/img/miryu2.jpeg" alt="">
-        </div>
-        <div class="restaurant-info">
-          <h3 class="restaurant-name">『ギリシャ料理<br>タベルナ ミリュウ』</h3>
-          <div class="info"><span>〜くつろいだ雰囲気の店内で前菜 グリル料理などの定番のギリシャ料理を味わえる店〜</span></div>
-          <div class="info"><span>営業時間: 月-土 11:30-14:00</span><span style="margin-left:72px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:30-19:30</span><span style="margin-left:72px;">日 定休日</span></div>
-          <div class="info"><span>電話番号: 03-3568-7850</span></div>
-          <div class="info"><span>住所: 東京都港区東麻布2丁目23-12 1F</span></div>
-          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.814028359044!2d139.7392975!3d35.6569533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9881c3d3ad%3A0x82f5b1024acfb849!2z44Ku44Oq44K344Oj5paZ55CGIOOCv-ODmeODq-ODiiDjg5_jg6rjg6XjgqY!5e0!3m2!1sja!2sph!4v1741012459600!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- 店舗20 -->
+        <div class="restaurant">
+          <div class="slider">
+            <img src="./assets/img/miryu1.jpeg" alt="" />
+            <img src="./assets/img/miryu2.jpeg" alt="" />
+          </div>
+          <div class="restaurant-info">
+            <h3 class="restaurant-name">
+              『ギリシャ料理<br />タベルナ ミリュウ』
+            </h3>
+            <div class="info">
+              <span
+                >〜くつろいだ雰囲気の店内で前菜
+                グリル料理などの定番のギリシャ料理を味わえる店〜</span
+              >
+            </div>
+            <div class="info">
+              <span>営業時間: 月-土 11:30-14:00</span
+              ><span style="margin-left: 72px"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17:30-19:30</span
+              ><span style="margin-left: 72px">日 定休日</span>
+            </div>
+            <div class="info"><span>電話番号: 03-3568-7850</span></div>
+            <div class="info">
+              <span>住所: 東京都港区東麻布2丁目23-12 1F</span>
+            </div>
+            <iframe
+              class="google"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.814028359044!2d139.7392975!3d35.6569533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9881c3d3ad%3A0x82f5b1024acfb849!2z44Ku44Oq44K344Oj5paZ55CGIOOCv-ODmeODq-ODiiDjg5_jg6rjg6XjgqY!5e0!3m2!1sja!2sph!4v1741012459600!5m2!1sja!2sph"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-      <!-- 追加のレストランがあれば、同様に追加 -->
+    <!-- 追加のレストランがあれば、同様に追加 -->
 
-  <section class="slider-container2">
-    <div class="slider2">
-      <img src="./assets/img/last1.jpeg" alt="Image 1">
-      <img src="./assets/img/last2.jpeg" alt="Image 2">
-      <img src="./assets/img/last3.jpeg" alt="Image 3">
-      <img src="./assets/img/last4.jpeg" alt="Image 4">
-      <img src="./assets/img/last5.jpeg" alt="Image 5">
-      <!-- 同じ画像を複製して無限ループ風にする -->
-      <img src="./assets/img/last6.jpeg" alt="Image 1">
-      <img src="./assets/img/last7.jpeg" alt="Image 2">
-      <img src="./assets/img/last8.jpeg" alt="Image 3">
-      <img src="./assets/img/last9.jpeg" alt="Image 4">
-      <img src="./assets/img/last10.jpeg" alt="Image 5">
-    </div>
-  </section>
+    <section class="slider-container2">
+      <div class="slider2">
+        <img src="./assets/img/last1.jpeg" alt="Image 1" />
+        <img src="./assets/img/last2.jpeg" alt="Image 2" />
+        <img src="./assets/img/last3.jpeg" alt="Image 3" />
+        <img src="./assets/img/last4.jpeg" alt="Image 4" />
+        <img src="./assets/img/last5.jpeg" alt="Image 5" />
+        <!-- 同じ画像を複製して無限ループ風にする -->
+        <img src="./assets/img/last6.jpeg" alt="Image 1" />
+        <img src="./assets/img/last7.jpeg" alt="Image 2" />
+        <img src="./assets/img/last8.jpeg" alt="Image 3" />
+        <img src="./assets/img/last9.jpeg" alt="Image 4" />
+        <img src="./assets/img/last10.jpeg" alt="Image 5" />
+      </div>
+    </section>
+
+    <section class="recommendations">
+      <h2>-My Best 3 Picks-</h2>
+      <p class="intro">
+        この中から厳選した3つのレストランについて詳しく紹介します!
+      </p>
+
+
+
   
-  <section class="recommendations">
-    <h2>-My Best 3 Picks-</h2>
-    <p class="intro">この中から厳選した3つのレストランについて詳しく紹介します!</p>
-
-    <div class="cards">
-
+      <div class="cards">
         <!-- 1つ目のレストラン -->
-        <div class="card">
-            <img src="./assets/img/kurumi6.jpeg" alt="レストラン1の写真">
-            <h3>1.『タイ食堂 くるみ』</h3>
-            <p>初めてこのお店に訪れた際、美味しすぎて翌週も訪れてしまったぐらい大好きなお店です。ご飯ももちろん美味しいですが、私が一番好きなのはタロ芋ケーキです。タイではモーゲンと呼ばれていると店員さんが教えてくれました。目黒駅から歩いてすぐなので是非一度訪れてみてください。</p>
-        </div>
+        <a href="#kurumi" class="card" id="card1">
+          <img src="./assets/img/kurumi6.jpeg" alt="レストラン1の写真" />
+          <h3>1.『タイ食堂 くるみ』</h3>
+          <p>
+            初めてこのお店に訪れた際、美味しすぎて翌週も訪れてしまったぐらい大好きなお店です。ご飯ももちろん美味しいですが、私が一番好きなのはタロ芋ケーキです。タイではモーゲンと呼ばれていると店員さんが教えてくれました。目黒駅から歩いてすぐなので是非一度訪れてみてください。
+          </p>
+        </a>
 
         <!-- 2つ目のレストラン -->
-        <div class="card">
-            <img src="./assets/img/banban2.jpeg" alt="レストラン2の写真">
-            <h3 style="font-size: 19px;">2.『カシワビストロ バンバン』</h3>
-            <p>バンバンは4人くらいで行くと1番コスパ良く食べられます。何度か訪れていますが、毎回必ず注文するのはトリュフリゾットです。またクリームブリュレもとても美味しいので是非頼んでみて欲しいです。神泉駅が近いですが、渋谷駅からも徒歩15分くらいで行けます。人気店なので予約してから行くのをおすすめします!</p>
-        </div>
+        <a href="#banban" class="card" id="card2">
+          <img src="./assets/img/banban2.jpeg" alt="レストラン2の写真" />
+          <h3 style="font-size: 19px">2.『カシワビストロ バンバン』</h3>
+          <p>
+            バンバンは4人くらいで行くと1番コスパ良く食べられます。何度か訪れていますが、毎回必ず注文するのはトリュフリゾットです。またクリームブリュレもとても美味しいので是非頼んでみて欲しいです。神泉駅が近いですが、渋谷駅からも徒歩15分くらいで行けます。人気店なので予約してから行くのをおすすめします!
+          </p>
+        </a>
 
         <!-- 3つ目のレストラン -->
-        <div class="card">
-            <img src="./assets/img/nakayosi1.jpeg" alt="レストラン3の写真">
-            <h3>3.『恵比寿 土鍋炊ごはん<br>なかよし 本店』</h3>
-            <p>なかよしは東京を中心に11店舗展開しているので、比較的行きやすいと思います。私のおすすめは若鶏と茄子の柚子おろし煮定食ですが、どれもとても美味しいです。店舗によるのですが、お刺身が付けられるところがあります。本店は付けられたと思うので是非試してください。土鍋で炊いたご飯がおかわり自由なのも注目ポイントです!</p>
-        </div>
+        <a href="#nakayoshi" class="card" id="card3">
+          <img src="./assets/img/nakayosi1.jpeg" alt="レストラン3の写真" />
+          <h3>3.『恵比寿 土鍋炊ごはん<br />なかよし 本店』</h3>
+          <p>
+            なかよしは東京を中心に11店舗展開しているので、比較的行きやすいと思います。私のおすすめは若鶏と茄子の柚子おろし煮定食ですが、どれもとても美味しいです。店舗によるのですが、お刺身が付けられるところがあります。本店は付けられたと思うので是非試してください。土鍋で炊いたご飯がおかわり自由なのも注目ポイントです!
+          </p>
+        </a>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-  <!-- フッター -->
-  <!-- <div class="content">
+    <!-- フッター -->
+    <!-- <div class="content">
     <h1>ウェブサイトのタイトル</h1>
     <p>ここにウェブサイトのメインコンテンツが入ります。</p>
   </div> -->
 
-  <!-- フッター -->
-  <footer>
-    <!-- 中央寄せのロゴ -->
-  <div class="footer-logo">
-    <img src="./assets/img/Header_logo.png" alt="" >
-  </div>
-    <!-- 右下に表示されるテキスト -->
-    <div class="created-by">© 2025 Honoka Kanazawa<br>Supported by Kazuki & Takuma & Sena</div>
-  </footer>
+    <!-- フッター -->
+    <footer>
+      <!-- 中央寄せのロゴ -->
+      <div class="footer-logo">
+        <img src="./assets/img/Header_logo.png" alt="" />
+      </div>
+      <!-- 右下に表示されるテキスト -->
+      <div class="created-by">
+        © 2025 Honoka Kanazawa<br />Supported by Kazuki & Takuma & Sena
+      </div>
+    </footer>
 
+    <!-- jQuery -->
 
-  <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Slick JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<!-- Slick JS -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<script src="./assets/js/script.js"></script>
-</body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
