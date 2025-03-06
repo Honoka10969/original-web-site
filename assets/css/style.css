@@ -10,7 +10,17 @@
 #loading-screen {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #fae17f35;
+  color: white;
+  font-size: 1.5rem;
+}
 
+/* ローダーアニメーション */
+.loader {
   border: 5px solid #ccc;
   border-top: 5px solid #fff;
   border-radius: 50%;
@@ -82,7 +92,7 @@ body.loaded > *:not(#loading-screen):not(script) {
 
 /* ヘッダースタイリング */
 .header {
-  height: 80px;
+  height: 100px;
   background-color: #4d5657ee;
   position: fixed;
   top: 0;
@@ -126,10 +136,11 @@ body.loaded > *:not(#loading-screen):not(script) {
   padding: 0 20px;
   padding-left: 2px;
   background-color: transparent; /* 背景を白に */
-  height: 10px;
+  height: 50px;
   align-items: center;
   margin-top: 20%;
   text-align: right;
+  
 }
 
 /* ドロップダウンボタンのデザイン */
@@ -171,7 +182,7 @@ body.loaded > *:not(#loading-screen):not(script) {
 }
 
 .goo{
-   display: flex;
+  display: flex;
 }
 
 .translate {
@@ -185,24 +196,22 @@ body.loaded > *:not(#loading-screen):not(script) {
   display: flex; /* 横並びにする */
   align-items: center; /* 垂直方向中央揃え */
   justify-content: center; /* 水平方向中央揃え */
-  gap: 10px; /* アイコンとMENUの間隔 */
+  gap: 50px; /* アイコンとMENUの間隔 */
   white-space: nowrap; /* 改行を防ぐ */
-  width: 50px;
+  width: 60px;
   height: 80px;
   position: relative;
   appearance: none;
   border: 0;
-  margin-bottom: 10px;
   background-color: #4d565795;
   cursor: pointer;
   z-index: 1000;
 }
 
-.hamburger p{
-  margin-top: 30px;
+.hamburger p {
   color: rgba(255, 255, 255, 0.952);
   position: relative;
-  top: 15px;
+  top: 30px;
 }
 
 .hamburger span {
@@ -222,28 +231,46 @@ body.loaded > *:not(#loading-screen):not(script) {
   display: block;
   content: '';
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: hsla(0, 0%, 100%, 0.588);
   transition: all 0.5s;
 }
 
 .hamburger span::before {
-  top: 10px;
+  top: 12px;
 }
 
 .hamburger span::after {
-  bottom: 10px;
+  bottom: 12px;
 }
 
 .menu {
   font-family: 'Poppins', sans-serif;
+  font-size: 20px;
 }
+
+/* タブレットサイズ：768px以下 */
+@media (max-width: 768px) {
+  .menu {
+    position: relative;
+    top: 400px;
+  }
+  }
+
+/* スマホサイズ：480px以下 */
+@media (max-width: 480px) {
+  .menu {
+    position: relative;
+    top: 2000px;
+    
+  }
+  }
 
 .nav {
   position: fixed;
   width: 30%;
   height: 100vh;
-  top: 80px;
+  top: 100px;
   background-color: #5e6267ea;
   padding: 50px 0;
   transition: all 0.5s;
@@ -325,12 +352,12 @@ nav a:hover {
 @media (max-width: 768px) {
   .hamburger {
     width: 40px;
-    height: 60px;
+    height: 70px;
   }
 
   .hamburger p {
-    font-size: 0.9em;
-    top: 10px;
+    font-size: 1em;
+    top: 30px;
   }
 
   .nav {
@@ -365,6 +392,7 @@ nav a:hover {
   position: relative;
   width: 100%;
   margin: 0;
+  top: 20px;
   padding: 0;
   background-color: rgba(255, 255, 255, 0.592);
 }
@@ -372,9 +400,10 @@ nav a:hover {
 
  /* スライダーのスタイル */
 .regular {
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 20px;
   position: relative;
   transition: 0.3s;
   z-index: 1;
@@ -692,6 +721,30 @@ html, body {
   border-bottom: 3px dashed #ebd85c7f; /* ゴールド風のライン */
   display: inline-block;
 }
+/* === レスポンシブ対応 === */
+
+/* タブレットサイズ：768px以下 */
+@media (max-width: 768px) {
+  .restaurant-title {
+    font-size: 2.5em; /* 少し小さく */
+    margin-top: 40px;
+    margin-left: 10%;
+    letter-spacing: 1.5px;
+    border-bottom: 2px dashed #ebd85c7f; /* ラインも細く */
+  }
+}
+
+/* スマホサイズ：480px以下 */
+@media (max-width: 480px) {
+  .restaurant-title {
+    font-size: 2em; /* もっと小さく */
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ebd85c7f; /* 点線を実線に変更 */
+  }
+}
 
 .restaurant-name{
   margin-top: 30px;
@@ -791,7 +844,7 @@ body {
 /* メインのコンテナ */
 .restaurant-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
   box-sizing: border-box;
@@ -808,6 +861,8 @@ body {
   border-radius: 10px;
   box-sizing: border-box;
   transition: all 0.5s;
+  max-width: 1200px; /* 最大幅を設定 */
+  margin: 0 auto; /* 中央寄せ */
 }
 
  /* ホバー時のエフェクト */
@@ -856,6 +911,49 @@ h3 {
   width: 100%;
   height: 100%;
   border-radius: 5%;
+}
+
+.google-con {
+  height: 50%;
+}
+
+.map {
+  margin-bottom: 100px;
+
+}
+
+/* === レスポンシブ対応 === */
+
+/* 画面幅が1024px以下 → 3列レイアウト */
+@media (max-width: 1024px) {
+  .restaurant-container {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+/* 画面幅が768px以下 → 2列レイアウト */
+@media (max-width: 768px) {
+  .restaurant-container {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    margin: 0 20px;
+  }
+
+  .restaurant {
+    padding: 40px;
+  }
+}
+
+/* 画面幅が480px以下 → 1列レイアウト */
+@media (max-width: 480px) {
+  .restaurant-container {
+    grid-template-columns: 1fr; /* 1列表示 */
+    margin: 0 10px;
+  }
+
+  .restaurant {
+    padding: 30px;
+    font-size: 1rem;
+  }
 }
 
 /* レスポンシブ対応 */
@@ -968,7 +1066,7 @@ h3 {
 .cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -987,6 +1085,7 @@ h3 {
   text-align: left;
   transition: transform 0.3s ease;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
 
 .card img {
